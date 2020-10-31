@@ -1,0 +1,53 @@
+{
+  "name": "cypress-cucumber-webpack-example",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/node": "^10.12.11",
+    "through": "^2.3.8"
+  },
+  "scripts": {
+    "open": "./node_modules/.bin/cypress open -b chromium",
+    "cy:update-snapshots": "cypress run --env updateSnapshots=true",
+    "cy:run--snapshot-tests-with-reporter": "cypress run --reporter cypress-image-snapshot/reporter --spec \"features/addFlow/*.feature\";",
+    "cy:run-tests-with-no-failure": "cypress run --env failOnSnapshotDiff=false",
+    "clean-results": "rm -rf reports && rm -rf allure-results",
+    "merge-report": "npx mochawesome-merge --reportDir reports/separate-reports > reports/full_report.json",
+    "generate-report": "marge reports/full_report.json -o reports/html",
+    "test:virtualization": "cypress run -b chrome -r mocha-allure-reporter --spec \"features/virtualization/*.feature\";",
+    "test:helm": "cypress run -b chrome --env TAGS='@regression or @smoke and not @manual' -r mocha-allure-reporter --spec \"features/helm/*.feature\";",
+    "test:topology": "cypress run -b chrome -r mocha-allure-reporter --spec \"features/topology/*.feature\";",
+    "test:pipeline": "cypress run -b firefox --env TAGS='@regression or @smoke and not @manual' -r mocha-allure-reporter --spec \"features/pipelines/*.feature\";",
+    "test:knative": "cypress run -b chrome -r mocha-allure-reporter --spec \"features/knative/*.feature\";",
+    "test:addFlow": "cypress run -b chrome --env TAGS='@regression or @smoke and not @manual' -r mocha-allure-reporter --spec \"features/addFlow/*.feature\";",
+    "test": "npm run clean-results; npm run test:addFlow; npm run test:pipeline; npm run test:knative; npm run test:helm; npm run test:topology",
+    "cypress": "npm run clean-results; cypress run -b chrome --env TAGS='@smoke and not @manual' -r mocha-allure-reporter --spec \"features/*/*.feature\"; npm run merge-report; npm run generate-report",
+    "copyScreenshots": "cp -r screenshots allure-report/attachments",
+    "report": "allure generate allure-results --clean -o allure-report && allure open allure-report",
+    "specs": "./node_modules/.bin/cypress run --record --key d5c4e048-0e4b-4276-a769-591a08e5325a --group 2x-chrome --parallel --ci-build-id test2 --spec \"cypress/integration/features/scenarios/*.feature\" --browser chrome",
+    "headless": "./node_modules/.bin/cypress run --spec cypress/integration/features/scenarios/*.feature --browser chrome --headless"
+  },
+  "devDependencies": {
+    "@cypress/webpack-preprocessor": "^4.0.2",
+    "allure-commandline": "^2.0.0",
+    "cypress": "^5.0.0",
+    "cypress-axe": "^0.8.1",
+    "cypress-cucumber-preprocessor": "^4.0.0",
+    "cypress-image-snapshot": "^3.1.1",
+    "cypress-multi-reporters": "^1.4.0",
+    "fs-extra": "^7.0.1",
+    "glob": "^7.1.3",
+    "mocha": "5.2.0",
+    "mocha-allure-reporter": "^1.4.0",
+    "mocha-junit-reporter": "^2.0.0",
+    "mochawesome": "4.1.0",
+    "mochawesome-merge": "^4.1.0",
+    "mochawesome-report-generator": "^5.1.0",
+    "ts-loader": "^6.2.2",
+    "typescript": "3.8.3",
+    "webpack": "4.44.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/integration/features/step_definitions/**/"
+  }
+}
