@@ -26,7 +26,7 @@
     "report": "allure generate allure-results --clean -o allure-report && allure open allure-report",
     "specs": "./node_modules/.bin/cypress run --record --key d5c4e048-0e4b-4276-a769-591a08e5325a --group 2x-chrome --parallel --ci-build-id test2 --spec \"cypress/integration/features/scenarios/*.feature\" --browser chrome",
     "headless": "./node_modules/.bin/cypress run --spec cypress/integration/features/scenarios/*.feature --browser chrome --headless",
-    "pretty": "npx prettier --no-config './**/*.{ts,js}' --write",
+    "pretty": "npx prettier --no-config './cypress/**/*.{ts,js}' --write",
     "lint": "npx tslint -c tslint.json 'cypress/integration/features/**/**/*.ts'",
     "clean:screenshots": "npx cypress/screenshots/*",
     "clean:video": "npx rimraf cypress/videos/*"
