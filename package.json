@@ -7,7 +7,7 @@
     "through": "^2.3.8"
   },
   "scripts": {
-    "open": "./node_modules/.bin/cypress open -b chromium",
+    "open": "npx cypress open -b chromium",
     "cy:update-snapshots": "cypress run --env updateSnapshots=true",
     "cy:run--snapshot-tests-with-reporter": "cypress run --reporter cypress-image-snapshot/reporter --spec \"features/addFlow/*.feature\";",
     "cy:run-tests-with-no-failure": "cypress run --env failOnSnapshotDiff=false",
@@ -24,8 +24,8 @@
     "cypress": "npm run clean-results; cypress run -b chrome --env TAGS='@smoke and not @manual' -r mocha-allure-reporter --spec \"features/*/*.feature\"; npm run merge-report; npm run generate-report",
     "copyScreenshots": "cp -r screenshots allure-report/attachments",
     "report": "allure generate allure-results --clean -o allure-report && allure open allure-report",
-    "specs": "./node_modules/.bin/cypress run --record --key d5c4e048-0e4b-4276-a769-591a08e5325a --group 2x-chrome --parallel --ci-build-id test2 --spec \"cypress/integration/features/scenarios/*.feature\" --browser chrome",
-    "headless": "./node_modules/.bin/cypress run --spec cypress/integration/features/scenarios/*.feature --browser chrome --headless",
+    "specs": "npx cypress run --record --key d5c4e048-0e4b-4276-a769-591a08e5325a --group 2x-chrome --parallel --ci-build-id test2 --spec \"cypress/integration/features/scenarios/*.feature\" --browser chrome",
+    "headless": "npx cypress run --spec cypress/integration/features/scenarios/*.feature --browser chrome --headless",
     "pretty": "npx prettier --no-config './cypress/**/*.{ts,js}' --write",
     "lint": "npx tslint -c tslint.json 'cypress/integration/features/**/**/*.ts'",
     "clean:screenshots": "npx cypress/screenshots/*",
