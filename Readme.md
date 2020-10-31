@@ -1,12 +1,13 @@
-# Cypress | Boiler plate
+# Cypress | Cucumber Boilerplate
 
+### Installation and Runner
 ```
 npm install
 
 npm run specs
 ```
 
-### launch cypress
+### Launch and Debug
 ```
 npm run open
 ```
