@@ -10,5 +10,3 @@ npm run specs
 ```
 npm run open
 ```
-
-# https://github.com/makambalaji/cypress-cucumber-typescript/blob/master/integration-tests/support/commands/app.ts
