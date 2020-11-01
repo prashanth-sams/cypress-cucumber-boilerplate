@@ -4,3 +4,6 @@ allure-results/
 xunit.xml
 .DS_Store
 **/.DS_Store
+mochawesome-report/
+cypress/reports/
+cypress/videos/
