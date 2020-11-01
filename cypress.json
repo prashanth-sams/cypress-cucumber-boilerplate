@@ -1,6 +1,16 @@
 {
   "baseUrl": "https://www.google.com/",
   "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "reporterEnabled": "mochawesome",
+    "mochawesomeReporterOptions": {
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+    }
+  },
   "testFiles": "features/scenarios/*.{feature,features}",
   "ignoreTestFiles": "*.js",
   "fixturesFolder": "features/step_definitions/**/",
@@ -16,5 +26,8 @@
   "requestTimeout": 15000,
   "responseTimeout": 15000,
   "experimentalSourceRewriting": true,
-  "projectId": "dvw51k"
+  "projectId": "dvw51k",
+  "video": true,
+  "videoCompression": 32,
+  "videoUploadOnPasses": false
 }
