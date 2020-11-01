@@ -1,13 +1,21 @@
 # Cypress | Cucumber Boilerplate
 
-### Installation and Runner
+## Features
+- [x] TS Linter on git commit
+- [x] Mocha Report
+- [x] Allure Report
+
+### Installation
 ```
 npm install
-
-npm run specs
 ```
 
-### Launch and Debug
+### Test Runner
+```
+npm run tags
+```
+
+### Launcher
 ```
 npm run open
 ```
