@@ -1,7 +1,15 @@
 Feature: Validate Google Search Page
 
   Background:
-    Given I am on the homepage
+    Given I open Google home page
   
-  Scenario: Search Page Check
+  @search
+  Scenario Outline: Search Page Check
     Then I see "Google" in the title
+    When I search for "<keyword>"
+    Then I verify the result for "<result>"
+
+    Examples:
+      | keyword             | result          |
+      | Jesus Christ        | God             |
+      | Prashanth Sams      | Prashanth Sams  |

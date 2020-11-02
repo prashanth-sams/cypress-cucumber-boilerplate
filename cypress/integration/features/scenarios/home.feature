@@ -1,8 +1,8 @@
 Feature: Validate Google Home Page
 
   Background:
-    Given I am on the homepage
+    Given I open Google home page
   
-  @focus
+  @home
   Scenario: Home Page Check
     Then I see "Google" in the title
