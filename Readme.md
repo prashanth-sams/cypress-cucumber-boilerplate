@@ -6,7 +6,7 @@
 - [x] Mocha HTML Report
 - [x] Mocha XML Report
 - [x] Allure Report
-- [x] Screenshots on Failure
+- [x] Retries and Screenshots on failure
 - [x] Hooks and Tags
 
 ### Installation

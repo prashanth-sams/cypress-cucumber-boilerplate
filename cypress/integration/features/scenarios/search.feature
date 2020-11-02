@@ -10,6 +10,6 @@ Feature: Validate Google Search Page
     Then I verify the result for "<result>"
 
     Examples:
-      | keyword             | result          |
-      | Jesus Christ        | God             |
-      | Prashanth Sams      | Prashanth Sams  |
+      | keyword             | result               |
+      | Jesus Christ        | God                  |
+      | Prashanth Sams      | Selenium Essentials  |

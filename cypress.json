@@ -20,7 +20,11 @@
   "responseTimeout": 15000,
   "experimentalSourceRewriting": true,
   "projectId": "dvw51k",
-  "video": true,
+  "video": false,
   "videoCompression": 32,
-  "videoUploadOnPasses": false
+  "videoUploadOnPasses": false,
+  "retries": {
+    "runMode": 1,
+    "openMode": 2
+  }
 }
