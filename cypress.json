@@ -2,14 +2,7 @@
   "baseUrl": "https://www.google.com/",
   "reporter": "cypress-multi-reporters",
   "reporterOptions": {
-    "reporterEnabled": "mochawesome",
-    "mochawesomeReporterOptions": {
-        "reportDir": "cypress/reports/mocha",
-        "quite": true,
-        "overwrite": false,
-        "html": false,
-        "json": true
-    }
+    "configFile": "cypress/reporter-config.json"
   },
   "testFiles": "features/scenarios/*.{feature,features}",
   "ignoreTestFiles": "*.js",

@@ -17,6 +17,7 @@
     "node_modules"
   ],
   "include": [
-    "cypress/integration/features/**/*.*"
+    "cypress/integration/features/**/*.*",
+    "cypress/support/*.ts"
   ]
 }
