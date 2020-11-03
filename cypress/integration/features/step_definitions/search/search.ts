@@ -7,4 +7,5 @@ When("I search for {string}", (keyword: string) => {
 
 Then("I verify the result for {string}", (result: string) => {
   cy.contains(result);
+  cy.xpath('//*[@id="center_col"]').should("exist");
 });

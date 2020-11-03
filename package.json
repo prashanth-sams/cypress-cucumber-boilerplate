@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "cypress-cucumber-preprocessor": "^4.0.0",
     "@types/node": "^10.12.11",
+    "cypress-cucumber-preprocessor": "^4.0.0",
+    "cypress-xpath": "^1.6.0",
+    "@slack/web-api": "^5.13.0",
     "through": "^2.3.8"
   },
   "husky": {
@@ -74,6 +76,6 @@
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
-    "step_definitions": "cypress/integration/features/step_definitions/**/"
+    "step_definitions": "cypress/integration/features/step_definitions/"
   }
 }
