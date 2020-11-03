@@ -1,4 +1,5 @@
 const SEARCH_FIELD = '[name="q"]';
+const RESULT_CONTAINER = '//*[@id="center_col"]';
 
 class SearchPage {
   static search(keyword: any) {
