@@ -3,6 +3,6 @@ services:
   e2e:
     image: "cypress/included:5.5.0"
     working_dir: /e2e
-    command: "--record --key d5c4e048-0e4b-4276-a769-591a08e5325a --parallel --ci-build-id test7 --spec \"cypress/integration/features/scenarios/*.feature\" --browser chrome"
+    command: "--record --key d5c4e048-0e4b-4276-a769-591a08e5325a --parallel --ci-build-id test9 --spec \"cypress/integration/features/scenarios/*.feature\" --browser chrome"
     volumes:
       - $PWD:/e2e

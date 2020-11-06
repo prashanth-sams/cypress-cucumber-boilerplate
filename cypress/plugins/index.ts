@@ -3,6 +3,7 @@
  */
 
 const webpackPreprocessor = require("@cypress/webpack-preprocessor");
+const percyHealthCheck = require('@percy/cypress/task');
 
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
@@ -20,4 +21,7 @@ module.exports = (on, config) => {
 
     return launchOptions;
   });
+
+  on("task", percyHealthCheck);
+
 };
