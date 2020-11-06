@@ -11,6 +11,7 @@
 - [x] Dockerize tests
 - [x] Parallel testing using dockers
 - [x] Dashboard supported slack notifier
+- [x] Percy for Visual testing
 
 ### Installation
 ```
