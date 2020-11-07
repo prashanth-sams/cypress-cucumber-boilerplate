@@ -7,3 +7,4 @@ xunit.xml
 reports/
 cypress/reports/
 cypress/videos/
+cypress/screenshots/

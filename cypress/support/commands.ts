@@ -6,6 +6,7 @@
 // For more comprehensive examples of custom
 // commands please read more here:
 // https://on.cypress.io/custom-commands
+// https://docs.cypress.io/guides/tooling/typescript-support.html#Configure-tsconfig-json
 // ***********************************************
 //
 //
@@ -23,3 +24,11 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('listenRoute', (type, url, alias) => {
+    cy.server();
+    return cy.route({
+        method: type,
+        url
+    }).as(alias);
+});
