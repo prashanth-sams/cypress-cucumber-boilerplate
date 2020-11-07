@@ -1,17 +1,18 @@
 # Cypress | Cucumber Boilerplate
 
 ## Features
-- [x] TS Linter on git commit
 - [x] Page Object Pattern
+- [x] Dockerize tests
+- [x] Parallel testing using dockers
+- [x] XHR
+- [x] Hooks and Tags
+- [x] Retries and Screenshots on failure
+- [x] Percy for Visual testing
+- [x] Dashboard supported slack notifier
+- [x] TS Linter on git commit
 - [x] Mocha HTML Report
 - [x] Mocha XML Report
 - [x] Allure Report
-- [x] Retries and Screenshots on failure
-- [x] Hooks and Tags
-- [x] Dockerize tests
-- [x] Parallel testing using dockers
-- [x] Dashboard supported slack notifier
-- [x] Percy for Visual testing
 
 ### Installation
 ```
