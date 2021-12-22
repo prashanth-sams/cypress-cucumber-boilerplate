@@ -20,23 +20,14 @@ yarn
 ```
 
 ### Test Runner
-```
-npm run tests
 
-yarn tests
-```
-> Docker
-```
-docker run -it -v $PWD:/e2e -w /e2e cypress/included:9.1.1
-```
-> Scale Docker containers for parallel testing
-```
-docker-compose scale e2e=2
-```
-or
-```
-bash build.sh
-```
+| Action          | Command             |
+| --------------    | ---------          |
+| Node test runner | `npm run tests`   |
+| Yarn test runner | `yarn tests`   |
+| Docker test runner | `docker run -it -v $PWD:/e2e -w /e2e cypress/included:9.1.1` |
+| Scale Docker containers for parallel testing | `docker-compose scale e2e=2` |
+| Shell runner | `bash build.sh` |
 
 ### Cypress Launcher
 ```
@@ -45,7 +36,7 @@ npm run open
 
 #### OPTIONAL
 
-| Exercise          | Status             |
+| Action          | Command             |
 | --------------    | ---------          |
 | husky initializer | `npx husky-init`   |
 | linter on stagged git files | `yarn lint-staged`   |
