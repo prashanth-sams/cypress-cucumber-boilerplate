@@ -4,8 +4,7 @@
     "allowJs": true,
     "baseUrl": "https://www.google.com/",
     "types": [
-      "cypress",
-      "@percy/cypress"
+      "cypress"
     ],
     // "noEmit": true,
     "target": "es5",
