@@ -1,4 +1,5 @@
 # Cypress | Cucumber Boilerplate
+[![pull request lint](https://github.com/prashanth-sams/cypress-cucumber-boilerplate/actions/workflows/linter.yml/badge.svg?event=push)](https://github.com/prashanth-sams/cypress-cucumber-boilerplate/actions/workflows/linter.yml)
 
 ## Features
 - [x] Page Object Pattern
