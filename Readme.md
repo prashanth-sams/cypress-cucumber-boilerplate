@@ -7,7 +7,6 @@
 - [x] XHR
 - [x] Hooks and Tags
 - [x] Retries and Screenshots on failure
-- [x] Percy for Visual testing
 - [x] Dashboard supported slack notifier
 - [x] TS Linter on git commit
 - [x] Mocha HTML Report
@@ -21,7 +20,7 @@ npm install
 
 ### Test Runner
 ```
-npm run tags
+npm run tests
 ```
 > Docker
 ```
