@@ -17,11 +17,6 @@
 ```
 sudo npm install -g yarn
 yarn
-yarn add --dev lint-staged prettier
-```
-or
-```
-npm install
 ```
 
 ### Test Runner
