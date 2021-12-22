@@ -15,6 +15,12 @@
 
 ### Installation
 ```
+sudo npm install -g yarn
+yarn
+yarn add --dev lint-staged prettier
+```
+or
+```
 npm install
 ```
 
@@ -41,7 +47,12 @@ npm run open
 ```
 
 #### Optional
-To skip mandataory linter
+> To skip mandataory linter
 ```
 git commit -am '<message>' --no-verify
+```
+
+> husky initializer
+```
+npx husky-init
 ```

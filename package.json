@@ -16,8 +16,9 @@
   },
   "lint-staged": {
     "*.{js,ts,json,md}": [
-      "tslint --fix",
-      "prettier --write"
+      "yarn lint",
+      "yarn prettier --write",
+      "yarn tests --watchAll=false --findRelatedTests --bail"
     ]
   },
   "scripts": {
@@ -46,7 +47,8 @@
     "cypress": "npm run clean-results; cypress run -b chrome --env TAGS='@smoke and not @manual' -r mocha-allure-reporter --spec \"features/*/*.feature\"; npm run merge-report; npm run generate-report",
     "copyScreenshots": "cp -r screenshots allure-report/attachments",
     "clean:screenshots": "npx cypress/screenshots/*",
-    "clean:video": "npx rimraf cypress/videos/*"
+    "clean:video": "npx rimraf cypress/videos/*",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^5.11.0",
@@ -57,7 +59,7 @@
     "cypress-multi-reporters": "^1.5.0",
     "fs-extra": "^10.0.0",
     "glob": "^7.2.0",
-    "husky": "^7.0.4",
+    "husky": "^7.0.0",
     "lint-staged": "^12.1.3",
     "mocha": "9.1.3",
     "mocha-allure-reporter": "^1.4.0",
