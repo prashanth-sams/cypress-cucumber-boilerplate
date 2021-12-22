@@ -5,9 +5,7 @@
       "tslint-config-prettier"
     ],
     "rules": {
-      "prettier": true,
-      "no-submodule-imports": false,
-      "no-reference": false
+      "prettier": true
     },
     "linterOptions": {
       "exclude": ["*.json", "**/*.json"]
