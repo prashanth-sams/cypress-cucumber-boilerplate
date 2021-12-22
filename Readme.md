@@ -22,6 +22,8 @@ yarn
 ### Test Runner
 ```
 npm run tests
+
+yarn tests
 ```
 > Docker
 ```
@@ -41,13 +43,10 @@ bash build.sh
 npm run open
 ```
 
-#### Optional
-> To skip mandataory linter
-```
-git commit -am '<message>' --no-verify
-```
+#### OPTIONAL
 
-> husky initializer
-```
-npx husky-init
-```
+| Exercise          | Status             |
+| --------------    | ---------          |
+| husky initializer | `npx husky-init`   |
+| linter on stagged git files | `yarn lint-staged`   |
+| skip mandatory linter | `git commit -am '<message>' --no-verify` |
