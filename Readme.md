@@ -24,7 +24,7 @@ npm run tests
 ```
 > Docker
 ```
-docker run -it -v $PWD:/e2e -w /e2e cypress/included:5.5.0
+docker run -it -v $PWD:/e2e -w /e2e cypress/included:9.1.1
 ```
 > Scale Docker containers for parallel testing
 ```
@@ -35,7 +35,7 @@ or
 bash build.sh
 ```
 
-### Launcher
+### Cypress Launcher
 ```
 npm run open
 ```
