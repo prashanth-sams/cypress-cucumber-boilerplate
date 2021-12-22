@@ -39,3 +39,9 @@ bash build.sh
 ```
 npm run open
 ```
+
+#### Optional
+To skip mandataory linter
+```
+git commit -am '<message>' --no-verify
+```
