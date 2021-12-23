@@ -1,3 +1,5 @@
-npm run clean-results
+yarn clean-results
 
-docker-compose scale e2e=2
+docker-compose up --scale e2e=2
+
+docker-compose down

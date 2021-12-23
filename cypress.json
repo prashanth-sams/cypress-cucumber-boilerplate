@@ -23,6 +23,7 @@
   "video": false,
   "videoCompression": 32,
   "videoUploadOnPasses": false,
+  "screenshotOnRunFailure": true,
   "retries": {
     "runMode": 1,
     "openMode": 2

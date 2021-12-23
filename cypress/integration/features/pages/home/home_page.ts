@@ -1,6 +1,6 @@
 class HomePage {
-  static visit() {
-    cy.visit("https://www.google.com/");
+  static visit(_url: String) {
+    cy.visit(_url + "/");
     cy.url().should("include", "google.com");
   }
 }
