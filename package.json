@@ -27,7 +27,7 @@
     "merge-report": "npx mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/output.json",
     "generate-report": "npx marge cypress/reports/output.json -o reports/html",
     "specs": "npx cypress run --record --key d5c4e048-0e4b-4276-a769-591a08e5325a --group 2x-chrome --parallel --ci-build-id test2 --spec \"cypress/integration/features/scenarios/*.feature\" --browser chrome",
-    "tests": "npx cypress run --spec cypress/integration/features/scenarios/*.feature --browser chrome",
+    "tests": "npx cypress run --spec cypress/integration/features/scenarios/*.feature --browser chrome --env ENV=qa",
     "headless": "npx cypress run --spec cypress/integration/features/scenarios/*.feature --browser chrome --headless",
     "tags": "npm run clean-results; npx cypress run --spec \"cypress/integration/features/scenarios/*.feature\" --env \"TAGS=@xhr\" --browser chrome; npm run merge-report; npm run generate-report;",
     "pretty": "npx prettier --no-config './cypress/**/*.{ts,js}' --write",

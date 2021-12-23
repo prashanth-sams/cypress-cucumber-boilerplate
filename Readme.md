@@ -2,6 +2,7 @@
 [![pull request lint](https://github.com/prashanth-sams/cypress-cucumber-boilerplate/actions/workflows/linter.yml/badge.svg)](https://github.com/prashanth-sams/cypress-cucumber-boilerplate/actions/workflows/linter.yml)
 
 ## Features
+
 - [x] Page Object Pattern
 - [x] Dockerize tests
 - [x] Parallel testing using dockers
@@ -15,6 +16,7 @@
 - [x] Allure Report
 
 ### Installation
+
 ```
 sudo npm install -g yarn
 
@@ -23,13 +25,13 @@ yarn
 
 ### Test Runner
 
-| Action          | Command             |
-| --------------    | ---------          |
-| Node test runner | `npm run tests`   |
-| Yarn test runner | `yarn tests`   |
-| Docker test runner | `docker run -it -v $PWD:/e2e -w /e2e cypress/included:9.1.1` |
-| Scale Docker containers for parallel testing | `docker-compose scale e2e=2` |
-| Shell runner | `bash build.sh` |
+| Action                | Command               |
+| --------------        | ---------             |
+| Yarn test runner      | `yarn tests`          |
+| Node test runner      | `npm run tests`       |
+| Docker test runner    | `docker run -it -v $PWD:/e2e -w /e2e cypress/included:9.1.1`  |
+| Scale Docker containers for parallel testing | `docker-compose up --scale e2e=3`      |
+| Shell runner          | `bash build.sh`       |
 
 ### Cypress Launcher
 ```
